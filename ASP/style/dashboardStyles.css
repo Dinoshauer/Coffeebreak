@@ -1,0 +1,202 @@
+/*Google fonts. (Open Sans)*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
+
+h2{color: #bfaf8e; text-transform: uppercase; font-size: 17px; font-weight: 600;}
+h3{color: white; font-size: 110%; font-weight: bold; font-family: Open Sans Condensed;}
+h4{color: #3b3838; font-size: 90%; font-weight: bold; font-family: Open Sans Condensed;}
+
+/*Global CSS*/
+*{margin: 0; padding: 0; }
+body, html
+{
+	font-family: Open Sans;
+	color: #3b3838;
+	background: white;
+	width: 100%;
+	height: 100%;
+}
+
+.clear {clear:both;}
+.left {float: left;}
+.right {float: right;}
+hr {width: 100%; height: 1px; border: 0; margin: 10px 0; background: #dedede;}
+
+/*Botton styles*/
+.btn-primary{font-size:13px; color:#fff; background:#bfaf8e; padding:5px 10px; text-decoration:none; margin-right:10px; margin-top:-2px; border-radius:3px;}
+
+/*Top Style*/
+#top-navigation
+{
+	width: 100%;
+	height: 14.5%;
+	min-height: 100px;
+	background: #232021;
+	padding: 0.2% 0;
+	
+}
+
+	#top-navigation ul 
+	{
+		padding-top: 2%;
+		margin-left: 2%;
+	}
+
+	#top-navigation ul li
+	{
+		min-height: 31px;
+		min-width: 2%;
+		padding:0.8% 1.2% 0.2% 1.2%;
+		margin-right: 2.5%;
+		border-radius:3px;
+		float:left;
+		background: #302c2c;
+		list-style: none;
+		font-size:75%;
+		font-weight:400;
+		color: white;
+		text-decoration: none;
+	}
+	#top-navigation ul li a
+	{
+		font-size:90%;
+		font-weight:400;
+		color: white;
+		text-decoration: none;
+		line-height: 2em;
+		float: right;
+		padding-top: 4.5%;
+	}
+
+#top-subnavigation
+{
+	width: 100%;
+	height: 75px;
+	min-height: 75px;
+	background-color: #ececec;
+}
+	#top-subnavigation ul 
+	{
+		padding: 2% 0 0 0px;
+		margin-left: 3.5%;
+	}
+	#top-subnavigation ul li 
+	{
+		min-width:5%;
+		padding:0.8%;
+		margin-right: 2.5%;
+		line-height: 2em;
+		float:left;
+		list-style: none;
+		position: relative;
+		
+	}
+	
+		#top-subnavigation ul li:first-child
+		{
+			padding-left: 0;
+		}
+		#top-subnavigation ul li a:first-child
+		{
+			color:#3b3838;
+		}
+	#top-subnavigation ul li a
+	{
+		font-family: Open Sans Condensed;
+		font-size: 120%;
+		font-weight: 700;
+		color: #969696;
+		text-decoration: none;
+	}
+		#top-subnavigation ul li ul 
+		{
+			position: absolute;
+			display: none; 
+			left:-2%;
+			z-index: 9999;
+		}
+/*Sub navigation dropdown*/
+		#top-subnavigation ul li:hover ul
+		{
+			display: block;
+		}
+		#top-subnavigation ul li ul li
+		{
+			display: block;
+			clear: both;
+			padding: 10% 5% 5% 25%; 
+			background-color: #ececec;
+			width: 200%;
+		}
+			#top-subnavigation ul li ul li:first-child
+			{
+				padding: 10% 5% 5% 25%;
+			}
+			#top-subnavigation ul li ul li:hover
+			{
+				background: #ececec url(images/top-subnavigation-dropdown-awrrow.png) no-repeat 10px center;
+			}
+		#top-subnavigation ul li ul li a 
+		{
+			font-family: Open Sans;
+			font-size: 90%;
+			font-weight: 200;
+		}
+		/*Secipt hide / unhide*/
+		.close{display:none;}
+/*Content area*/
+/*Side bar (Left)*/
+#sidebar
+{
+	width: 15.5%;
+	margin: 5% 2.7% 0 3.5%;
+}
+	/*Sidebar navigation*/
+	#sidebar ul.nav {float: left; position: absolute;}
+	#sidebar ul.nav li 
+	{
+		list-style: none;
+		padding-left: 10%;
+		margin-bottom: 7%;
+		position: relative;
+		width: 100%;
+		background: url(images/csg-504734d154f38.png) no-repeat top left;
+	}
+	#sidebar ul.nav li a
+	{
+		font-size: 80%;
+		color: #3b3838;
+		text-decoration: none;
+	}
+		#sidebar ul.nav li ul li {margin-bottom: 4%; padding-left: 15%;}
+		#sidebar ul.nav li ul li a {font-size: 70%;}
+
+/*Content table styles*/
+.table
+{
+    width:100%;
+    font-size:13px;
+    border-bottom:1px solid #9d9d9d;
+    border-collapse:collapse;    
+}
+
+.table thead tr{height:30px; border:0;}
+
+.table tr
+{
+    height:55px;
+    border-bottom:1px solid #9d9d9d;
+}
+.table td{padding:5px;}
+
+/*Aplications*/
+/*calender*/
+.calender{/*Costom style for the UL Container add if needed*/}
+.calender h4 {margin-bottom: 3%; margin-top: 5%;}
+.calender li 
+{
+	list-style: none;
+	font-size: 70%;
+	padding-left: 6%;
+}
+	
