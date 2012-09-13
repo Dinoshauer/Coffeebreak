@@ -10,6 +10,16 @@
 	/*background: maroon; - testing color dont include*/
 }
 
+.app-calendar
+{
+    padding-bottom:10px;
+    text-indent:5px;
+}
+.app-calendar:hover
+{
+    background-color:#ececec;
+    cursor:default;
+}
 
 .span1
 {

@@ -190,10 +190,10 @@ hr {width: 100%; height: 1px; border: 0; margin: 10px 0; background: #dedede;}
 .table td{padding:5px;}
 
 /*Aplications*/
-/*calender*/
-.calender{/*Costom style for the UL Container add if needed*/}
-.calender h4 {margin-bottom: 3%; margin-top: 5%;}
-.calender li 
+/*calendar*/
+.calendar{/*Costom style for the UL Container add if needed*/}
+.calendar h4 {margin-bottom: 3%; margin-top: 5%;}
+.calendar li 
 {
 	list-style: none;
 	font-size: 70%;

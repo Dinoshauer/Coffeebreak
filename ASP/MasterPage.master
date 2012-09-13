@@ -55,7 +55,7 @@
 		</div>
 		<div id="top-subnavigation">
 			<ul class="dashbord-navigation">
-				<li> <a href="#">Dashboard</a> </li>
+				<li> <a href="Default.aspx">Dashboard</a> </li>
 				<li>
 					<a href="#">Client overview</a>
 					<ul>

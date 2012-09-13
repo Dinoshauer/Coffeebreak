@@ -14,6 +14,8 @@ public partial class create : System.Web.UI.Page
     {
         Panel_CreateRoleTeam.Visible = false;
         Panel_CreateUser.Visible = false;
+        LabelHeading.Text = "Oops!";
+        LabelDescr.Text = "Something has gone wrong, please, go back and try again.";
 
         if (Request.QueryString["new"] == "user")
         {

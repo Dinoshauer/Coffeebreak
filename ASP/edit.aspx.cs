@@ -14,6 +14,8 @@ public partial class edit : System.Web.UI.Page
     {
         Panel_TeamRoleEdit.Visible = false;
         Panel_UserEdit.Visible = false;
+        LabelHeading.Text = "Oops!";
+        LabelDescr.Text = "Something has gone wrong, please, go back and try again.";
 
         //Opret connection så vi kan bruge conn hele vejen igennem
         SqlConnection conn = new SqlConnection();
@@ -25,7 +27,7 @@ public partial class edit : System.Web.UI.Page
         if (Request.QueryString["user"] != null)
         {
             Panel_UserEdit.Visible = true;
-            Label_Heading.Text = "Editing user";
+            LabelHeading.Text = "Editing user";
             cmd_GetData.CommandText = "SELECT * FROM users INNER JOIN user_levels ON users.fk_user_level = user_levels.user_level_id INNER JOIN user_team ON users.fk_user_team = user_team.user_team_id WHERE user_id=@user_id";
             cmd_GetData.Parameters.Add("@user_id", SqlDbType.Int).Value = Request.QueryString["user"];
             conn.Open();
@@ -55,7 +57,7 @@ public partial class edit : System.Web.UI.Page
         else if (Request.QueryString["role"] != null)
         {
             Panel_TeamRoleEdit.Visible = true;
-            Label_Heading.Text = "Editing role";
+            LabelHeading.Text = "Editing role";
             cmd_GetData.CommandText = "SELECT * FROM user_levels WHERE user_level_id=@user_level_id";
             cmd_GetData.Parameters.Add("@user_level_id", SqlDbType.Int).Value = Request.QueryString["role"];
             conn.Open();
@@ -70,7 +72,7 @@ public partial class edit : System.Web.UI.Page
         else if (Request.QueryString["team"] != null)
         {
             Panel_TeamRoleEdit.Visible = true;
-            Label_Heading.Text = "Editing team";
+            LabelHeading.Text = "Editing team";
             cmd_GetData.CommandText = "SELECT * FROM user_team WHERE user_team_id=@user_team_id";
             cmd_GetData.Parameters.Add("@user_team_id", SqlDbType.Int).Value = Request.QueryString["team"];
             conn.Open();
@@ -159,7 +161,7 @@ public partial class edit : System.Web.UI.Page
                 SqlCommand cmd_UpdateData = new SqlCommand();
                 cmd_UpdateData.Connection = conn;
                 cmd_UpdateData.CommandText = "UPDATE users SET user_username = @user_username, user_password = @user_password, user_email = @user_email, user_name = @user_name, user_lastname = @user_lastname, user_phone = @user_phone, user_company = @user_company, fk_user_level = @fk_user_level, fk_user_team = @fk_user_team, fk_user_team_secondary = @fk_user_team_secondary, fk_user_team_third = @fk_user_team_third, fk_user_team_fourth = @fk_user_team_fourth, fk_user_team_fifth = @fk_user_team_fifth, user_creationdate = @user_creationdate, user_lastlogindate = @user_lastlogindate WHERE user_id = @user_id";
-                cmd_UpdateData.Parameters.Add("@user_id", SqlDbType.Int).Value = Request.QueryString["Edit"];
+                cmd_UpdateData.Parameters.Add("@user_id", SqlDbType.Int).Value = Request.QueryString["user"];
                 cmd_UpdateData.Parameters.Add("@user_username", SqlDbType.VarChar).Value = TextBox_Email.Text;
                 cmd_UpdateData.Parameters.Add("@user_password", SqlDbType.VarChar).Value = TextBox_Password.Text;
                 cmd_UpdateData.Parameters.Add("@user_email", SqlDbType.VarChar).Value = TextBox_Email.Text;

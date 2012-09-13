@@ -3,7 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" Runat="Server">
-    <asp:Label ID="Label_Heading" runat="server" Text="Something went wrong with the request. Please go back and try again."></asp:Label>
+        <div class="header">
+            <h3>
+                <asp:Label ID="LabelHeading" runat="server" Text="Label"></asp:Label>
+            </h3>
+            <i>
+                <asp:Label ID="LabelDescr" runat="server" Text="Label"></asp:Label>
+            </i>
+        </div>
     <asp:Panel ID="Panel_UserEdit" runat="server">
         <div class="control-group">
             <label for="TextBox_CreationDate">Creation date</label>

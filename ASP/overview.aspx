@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="content" Runat="Server">
+    <h2 style="margin-bottom:10px;">Users & groups</h2>
     <div class="header"><h3><asp:Label ID="Label_Heading" runat="server" Text=""></asp:Label></h3><i>
         <asp:Label ID="Label_Descr" runat="server" Text="Label"></asp:Label></i><asp:HyperLink ID="HyperLink_Create" runat="server" class="right btn-primary">Create</asp:HyperLink></div>
     
